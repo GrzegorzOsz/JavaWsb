@@ -29,5 +29,6 @@ public class Main {
         dog.takeForWalk();
         dog.feed();
 
+        Car fiat = new Car("fiat","Bravo",2020);
     }
 }
