@@ -6,16 +6,31 @@ public class Human {
     String firstname;
     String lastName;
     Integer age;
-    private Double salary;
+    private Integer salary;
     private Car fiat;
 
-    Double getSalary() {
+    public Car getFiat() {
+        return this.fiat;
+    }
+
+    public void setFiat(Car fiat) {
+        if (this.salary > fiat.value) {
+            System.out.println("stać cie");
+        this.fiat = fiat;
+        }else if (this.salary > fiat.value/12 ) {
+            System.out.println ("udało się kupić samochód na kredyt");
+            this.fiat = fiat;
+        }else {
+            System.out.println("nie stać cie, poszukaj lepszej pracy");
+    }
+
+   public void getSalary() {
         System.out.println("wyplata:"+this.salary);
         System.out.println (new Date());
         return salary;
     }
 
-    void setSalary(double salary) {
+   public void setSalary(Integer salary) {
         if (salary < 0.00) {
             System.out.println("Wypłata musi być wieksza niz 0");
         } else {
@@ -27,3 +42,18 @@ public class Human {
 
     }
 }
+
+    public void setSalary(int salary) {
+        System.out.println("wyplata:"+this.salary);
+        System.out.println (new Date());
+        this.salary = salary;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+}
+
+
+
+
